@@ -21,11 +21,11 @@ struct MovieListView: View {
                 
                 
                 if viewModel.movies.isEmpty {
-                    Text("No movies found")
+                    Text("Search for any movie")
                         .padding()
                 } else {
                     List(viewModel.movies) { movie in
-                        MovieCell(movie: movie)
+                        MovieCell(viewModel: viewModel, movie: movie)
                     }
                 }
             }

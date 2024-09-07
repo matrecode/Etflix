@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MovieCell: View {
+    @ObservedObject var viewModel: MovieListViewModel
     let movie: MovieModel
     var body: some View {
         NavigationLink(destination: MovieDetailsView(movie: movie)) {
@@ -32,9 +33,10 @@ struct MovieCell: View {
                 }
                 Spacer()
                 Button(action: {
-                    
+                    viewModel.toggleFavourite(movie: movie)
                 }){
-                    Image(systemName: "heart")
+                    Image(systemName: movie.isFavourite ? "heart.fill" : "heart")
+                        .foregroundColor(movie.isFavourite ? .red : .gray)
                 }
                 .buttonStyle(PlainButtonStyle())
             }
@@ -44,5 +46,5 @@ struct MovieCell: View {
 }
 
 #Preview {
-    MovieCell(movie: MovieModel(title: "Example Movie", year: "2024", poster: "https://via.placeholder.com/150"))
+    MovieCell(viewModel: MovieListViewModel(),  movie: MovieModel(title: "Example Movie", year: "2024", poster: "https://via.placeholder.com/150"))
 }

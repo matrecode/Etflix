@@ -12,6 +12,7 @@ struct MovieModel: Codable, Identifiable {
     let title: String
     let year: String
     let poster: String
+    var isFavourite: Bool = false
 
     enum CodingKeys: String, CodingKey {
         case title = "Title"
