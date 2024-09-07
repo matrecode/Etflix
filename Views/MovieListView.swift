@@ -1,10 +1,3 @@
-//
-//  MovieListView.swift
-//  Setflix
-//
-//  Created by Hemant Rajkumar Pancheshwar on 05/09/24.
-//
-
 import SwiftUI
 
 struct MovieListView: View {

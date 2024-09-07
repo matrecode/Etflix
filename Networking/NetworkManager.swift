@@ -1,10 +1,3 @@
-//
-//  NetworkManager.swift
-//  Setflix
-//
-//  Created by Hemant Rajkumar Pancheshwar on 05/09/24.
-//
-
 import Foundation
 import Combine
 

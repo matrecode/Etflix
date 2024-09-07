@@ -1,10 +1,3 @@
-//
-//  MovieCell.swift
-//  Setflix
-//
-//  Created by Hemant Rajkumar Pancheshwar on 06/09/24.
-//
-
 import SwiftUI
 
 struct MovieCell: View {
